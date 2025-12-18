@@ -1,0 +1,8 @@
+WARNING: A Java agent has been loaded dynamically (/home/albert/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+Apartment{id=103c0915-86eb-4221-bbc0-e6c5557efbd8, price=10000, area=100, bedrooms=3, bathrooms=2, stories=2, mainroad='Yes', guestroom='Yes', basement='Yes', hotwater='null', airconditioning='null', parking=2, prefarea='Yes', furnishingstatus='null', reviews='0'}
+House{id=b655e421-00fe-4b9b-acff-54fe5130d11e, garageQty=2, roofType='Tile', garden='Yes'}
+Duplex{id='67cac4a4-80d5-477d-abca-9b265d29ab6a', balcony='Yes', elevator='Yes'}

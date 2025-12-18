@@ -1,0 +1,66 @@
+WARNING: A Java agent has been loaded dynamically (/home/albert/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+Hibernate: select a1_0.id,a1_0.airconditioning,a1_0.area,a1_0.basement,a1_0.bathrooms,a1_0.bedrooms,a1_0.furnishingstatus,a1_0.guestroom,a1_0.hotwaterheating,a1_0.mainroad,a1_0.parking,a1_0.prefarea,a1_0.price,a1_0.stories,r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from apartment a1_0 left join review r1_0 on a1_0.id=r1_0.apartment_fk where a1_0.id=?
+Hibernate: insert into apartment (airconditioning,area,basement,bathrooms,bedrooms,furnishingstatus,guestroom,hotwaterheating,mainroad,parking,prefarea,price,stories,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+Apartment saved: Apartment{id=fe9614a2-1a3f-403c-9822-4f5d027e13ed, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+
+=== Apartments in the Database ===
+Hibernate: select a1_0.id,a1_0.airconditioning,a1_0.area,a1_0.basement,a1_0.bathrooms,a1_0.bedrooms,a1_0.furnishingstatus,a1_0.guestroom,a1_0.hotwaterheating,a1_0.mainroad,a1_0.parking,a1_0.prefarea,a1_0.price,a1_0.stories from apartment a1_0
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+#1
+Apartment{id=19a1b4c3-cfc8-4db2-885c-546db0511463, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+#2
+Apartment{id=2aacac51-4eea-4f7d-8a03-227751c23ba2, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+#3
+Apartment{id=16182e68-875b-44c5-b2cb-63e36944be51, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+#4
+Apartment{id=417de6de-d9ca-4a6c-b58e-17563eae556b, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+#5
+Apartment{id=bda8652f-1deb-4695-bcce-8cebcbe98870, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+#6
+Apartment{id=9abc6e84-7b0d-4dd8-a4cd-58f1686ee93c, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+#7
+Apartment{id=2447b1ac-80e1-4227-b561-e3768c2dca34, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+#8
+Apartment{id=fe9614a2-1a3f-403c-9822-4f5d027e13ed, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+Hibernate: select r1_0.id,a1_0.id,a1_0.airconditioning,a1_0.area,a1_0.basement,a1_0.bathrooms,a1_0.bedrooms,a1_0.furnishingstatus,a1_0.guestroom,a1_0.hotwaterheating,a1_0.mainroad,a1_0.parking,a1_0.prefarea,a1_0.price,a1_0.stories,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 left join apartment a1_0 on a1_0.id=r1_0.apartment_fk where r1_0.id=?
+Hibernate: select a1_0.id,a1_0.airconditioning,a1_0.area,a1_0.basement,a1_0.bathrooms,a1_0.bedrooms,a1_0.furnishingstatus,a1_0.guestroom,a1_0.hotwaterheating,a1_0.mainroad,a1_0.parking,a1_0.prefarea,a1_0.price,a1_0.stories,r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from apartment a1_0 left join review r1_0 on a1_0.id=r1_0.apartment_fk where a1_0.id=?
+Hibernate: insert into review (apartment_fk,content,rating,review_date,title,id) values (?,?,?,?,?,?)
+Hibernate: select a1_0.id,a1_0.airconditioning,a1_0.area,a1_0.basement,a1_0.bathrooms,a1_0.bedrooms,a1_0.furnishingstatus,a1_0.guestroom,a1_0.hotwaterheating,a1_0.mainroad,a1_0.parking,a1_0.prefarea,a1_0.price,a1_0.stories,r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from apartment a1_0 left join review r1_0 on a1_0.id=r1_0.apartment_fk where a1_0.id=?
+
+=== Apartments in the Database ===
+Hibernate: select a1_0.id,a1_0.airconditioning,a1_0.area,a1_0.basement,a1_0.bathrooms,a1_0.bedrooms,a1_0.furnishingstatus,a1_0.guestroom,a1_0.hotwaterheating,a1_0.mainroad,a1_0.parking,a1_0.prefarea,a1_0.price,a1_0.stories from apartment a1_0
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+Hibernate: select r1_0.apartment_fk,r1_0.id,r1_0.content,r1_0.rating,r1_0.review_date,r1_0.title from review r1_0 where r1_0.apartment_fk=?
+#1
+Apartment{id=19a1b4c3-cfc8-4db2-885c-546db0511463, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+#2
+Apartment{id=2aacac51-4eea-4f7d-8a03-227751c23ba2, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+#3
+Apartment{id=16182e68-875b-44c5-b2cb-63e36944be51, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+#4
+Apartment{id=417de6de-d9ca-4a6c-b58e-17563eae556b, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+#5
+Apartment{id=bda8652f-1deb-4695-bcce-8cebcbe98870, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+#6
+Apartment{id=9abc6e84-7b0d-4dd8-a4cd-58f1686ee93c, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+#7
+Apartment{id=2447b1ac-80e1-4227-b561-e3768c2dca34, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='0'}
+#8
+Apartment{id=fe9614a2-1a3f-403c-9822-4f5d027e13ed, price=null, area=5, bedrooms=null, bathrooms=null, stories=null, mainroad='null', guestroom='null', basement='null', hotwater='null', airconditioning='yes', parking=null, prefarea='null', furnishingstatus='null', reviews='1'}
