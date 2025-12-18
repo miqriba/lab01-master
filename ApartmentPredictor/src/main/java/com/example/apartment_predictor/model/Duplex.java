@@ -1,63 +1,39 @@
 package com.example.apartment_predictor.model;
 
-import java.util.List;
-import java.util.UUID;
+import jakarta.persistence.Entity;
 
-public class Duplex extends SingleFamilyHome {
+@Entity
+public class Duplex extends SingleFamilyHome{
 
-    private String balcony;
-    private String elevator;
-    private boolean hasSeparateUtilities;
+    private boolean hasSeparatedUtilities;
 
+    public Duplex() {}
 
-    public Duplex() { }
-
-    public Duplex(double area, int locationRating, String address, int numberOfBedrooms, int numberOfBathrooms, boolean hasGarden, double lotSize, boolean hasGarage, boolean hasPool, boolean hasSeparateUtilities) {
+    public Duplex(double area, int locationRating, String address, int numberOfBedrooms, int numberOfBathrooms, boolean hasGarden, double lotSize, boolean hasGarage, boolean hasPool, boolean hasSeparatedUtilities) {
         super(area, locationRating, address, numberOfBedrooms, numberOfBathrooms, hasGarden, lotSize, hasGarage, hasPool);
-        this.hasSeparateUtilities = hasSeparateUtilities;
+        this.hasSeparatedUtilities = hasSeparatedUtilities;
     }
 
-    public String getBalcony() {
-        return balcony;
+    public boolean isHasSeparatedUtilities() {
+        return hasSeparatedUtilities;
     }
 
-    public void setBalcony(String balcony) {
-        this.balcony = balcony;
+    public void setHasSeparatedUtilities(boolean hasSeparatedUtilities) {
+        this.hasSeparatedUtilities = hasSeparatedUtilities;
     }
 
-    public String getElevator() {
-        return elevator;
-    }
+    // In the Duplex version of this method, only families with 4 or more members are allowed.
+    @Override
+    public boolean isSuitableForFamily(int familySize) {
 
-    public void setElevator(String elevator) {
-        this.elevator = elevator;
-    }
-
-    public boolean isHasSeparateUtilities() {
-        return hasSeparateUtilities;
-    }
-
-    public void setHasSeparateUtilities(boolean hasSeparateUtilities) {
-        this.hasSeparateUtilities = hasSeparateUtilities;
+        if (super.isSuitableForFamily(familySize) && familySize >= 4) return true;
+        else return false;
     }
 
     @Override
     public String toString() {
         return "Duplex{" +
-                //"id='" + id + '\'' +
-                ", balcony='" + balcony + '\'' +
-                ", elevator='" + elevator + '\'' +
-
+                "hasSeparatedUtilities=" + hasSeparatedUtilities +
                 '}';
-    }
-
-    // inherits isSuitableForFamily (from ResidentialProperty) and adds new conditions
-    @Override
-    public boolean isSuitableForFamily(int familySize) {
-
-        if (super.isSuitableForFamily(familySize) && familySize >= 4) {
-            return true;
-        } else return false;
-        //return super.isSuitableForFamily(familySize) && familySize >= 4;
     }
 }
