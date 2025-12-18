@@ -1,18 +1,11 @@
 package com.example.apartment_predictor.model;
 
-import jakarta.persistence.*;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import jakarta.persistence.Entity;
 
 @Entity
-public class Apartment extends ResidentialProperty {
+public class Apartment extends ResidentialProperty{
 
-    @Id
-    protected String id;
     private Long price;
-    //private Integer area;
     private Integer bedrooms;
     private Integer bathrooms;
     private Integer stories;
@@ -28,18 +21,9 @@ public class Apartment extends ResidentialProperty {
     private int floorLevel;
     private boolean hasBalcony;
 
-    @OneToMany(
-            mappedBy = "apartment",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.EAGER)
-    private List<Review> reviews = new ArrayList<>();
+    public Apartment() {}
 
-    // Default constructor
-    public Apartment() {
-        this.id = UUID.randomUUID().toString();
-    }
-
-    public Apartment(double area, int locationRating, String address, int numberOfBedrooms, int numberOfBathrooms, boolean hasGarden, Long price, Integer bedrooms, Integer bathrooms, Integer stories, String mainroad, String guestroom, String basement, String hotwaterheating, String airconditioning, Integer parking, String prefarea, boolean hasBalcony, String furnishingstatus, int floorLevel, List<Review> reviews) {
+    public Apartment(double area, int locationRating, String address, int numberOfBedrooms, int numberOfBathrooms, boolean hasGarden, Long price, Integer bedrooms, Integer bathrooms, Integer stories, String mainroad, String guestroom, String basement, String hotwaterheating, String airconditioning, Integer parking, String prefarea, String furnishingstatus, int floorLevel, boolean hasBalcony) {
         super(area, locationRating, address, numberOfBedrooms, numberOfBathrooms, hasGarden);
         this.price = price;
         this.bedrooms = bedrooms;
@@ -52,26 +36,11 @@ public class Apartment extends ResidentialProperty {
         this.airconditioning = airconditioning;
         this.parking = parking;
         this.prefarea = prefarea;
-        this.hasBalcony = hasBalcony;
         this.furnishingstatus = furnishingstatus;
         this.floorLevel = floorLevel;
-        this.reviews = reviews;
+        this.hasBalcony = hasBalcony;
     }
 
-    // helpers
-
-    public void addReview(Review review) {
-        reviews.add(review);
-        review.setApartment(this);
-    }
-
-    public void removeReview(Review review) {
-        reviews.remove(review);
-        review.setApartment(null);
-    }
-
-
-    // Getters and Setters
     public Long getPrice() {
         return price;
     }
@@ -79,14 +48,6 @@ public class Apartment extends ResidentialProperty {
     public void setPrice(Long price) {
         this.price = price;
     }
-
-    /* public Integer getArea() {
-        return area;
-    }
-
-    public void setArea(Integer area) {
-        this.area = area;
-    }*/
 
     public Integer getBedrooms() {
         return bedrooms;
@@ -176,22 +137,6 @@ public class Apartment extends ResidentialProperty {
         this.furnishingstatus = furnishingstatus;
     }
 
-    public String getId() {
-        return id;
-    }
-
-   /* public void setId(String id) {
-        this.id = id;
-    }*/
-
-   public List<Review> getReviews() {
-        return reviews;
-    }
-
-    public void setReviews(List<Review> reviews) {
-        this.reviews = reviews;
-    }
-
     public int getFloorLevel() {
         return floorLevel;
     }
@@ -211,23 +156,20 @@ public class Apartment extends ResidentialProperty {
     @Override
     public String toString() {
         return "Apartment{" +
-                "id=" + id +
-                ", price=" + price +
-                ", area=" + area +
+                "price=" + price +
                 ", bedrooms=" + bedrooms +
                 ", bathrooms=" + bathrooms +
                 ", stories=" + stories +
                 ", mainroad='" + mainroad + '\'' +
                 ", guestroom='" + guestroom + '\'' +
                 ", basement='" + basement + '\'' +
-                ", hotwater='" + hotwaterheating + '\'' +
+                ", hotwaterheating='" + hotwaterheating + '\'' +
                 ", airconditioning='" + airconditioning + '\'' +
                 ", parking=" + parking +
                 ", prefarea='" + prefarea + '\'' +
                 ", furnishingstatus='" + furnishingstatus + '\'' +
-                ", reviews='" + reviews.size() + '\'' +
+                ", floorLevel=" + floorLevel +
+                ", hasBalcony=" + hasBalcony +
                 '}';
     }
-
-    // inherits ResidentialProperty method "isSuitableForFamily"
 }
