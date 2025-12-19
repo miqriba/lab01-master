@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ApartmentService {
+public class ApartmentService{
 
     // implement CRUD operations: read
     public List<Apartment> findAll() {

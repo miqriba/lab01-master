@@ -57,6 +57,13 @@ public abstract class ResidentialProperty extends Property{
     }
 
     @Override
+    public double calculatePrice() {
+        int numberOfRooms = numberOfBedrooms + numberOfBedrooms;
+        double basePrice = area * 120 + (numberOfRooms * 8000);
+        return basePrice * (1 + (locationRating * 0.04));
+    }
+
+    @Override
     public String toString() {
         return "ResidentialProperty{" +
                 "numberOfBedrooms=" + numberOfBedrooms +

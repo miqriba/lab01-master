@@ -31,6 +31,17 @@ public class Duplex extends SingleFamilyHome{
     }
 
     @Override
+    public double calculatePrice() {
+
+        int numberOfRooms = numberOfBathrooms + numberOfBedrooms;
+        double basePrice = area * 180 + (numberOfRooms * 15000);
+
+        if (hasSeparatedUtilities) basePrice *= 1.15;
+
+        return basePrice * (1 + (locationRating * 0.09));
+    }
+
+    @Override
     public String toString() {
         return "Duplex{" +
                 "hasSeparatedUtilities=" + hasSeparatedUtilities +

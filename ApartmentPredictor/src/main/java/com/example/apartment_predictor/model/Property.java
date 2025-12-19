@@ -56,6 +56,8 @@ public abstract class Property {
         this.address = address;
     }
 
+    public abstract double calculatePrice();
+
     @Override
     public String toString() {
         return "Property{" +

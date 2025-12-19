@@ -47,6 +47,17 @@ public class Townhouse extends SingleFamilyHome{
     }
 
     @Override
+    public double calculatePrice() {
+
+        int numberOfRooms = numberOfBathrooms + numberOfBedrooms;
+
+        double basePrice = area * 180 + (numberOfRooms * 15000);
+        if (hasGarage) basePrice += 25000;
+
+        return basePrice * (1 + (locationRating * 0.06));
+    }
+
+    @Override
     public String toString() {
         return "Townhouse{" +
                 "hasHomeownersAssociation=" + hasHomeownersAssociation +

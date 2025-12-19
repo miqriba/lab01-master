@@ -154,6 +154,14 @@ public class Apartment extends ResidentialProperty{
     }
 
     @Override
+    public double calculatePrice() {
+        int numberOfRooms = numberOfBathrooms + numberOfBedrooms;
+        double basePrice = area * 180 + (numberOfRooms * 15000);
+        if (hasBalcony) basePrice += 10000;
+        return basePrice * (1 +(locationRating * 0.6));
+    }
+
+    @Override
     public String toString() {
         return "Apartment{" +
                 "price=" + price +
