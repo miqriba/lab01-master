@@ -58,6 +58,8 @@ public abstract class Property {
 
     public abstract double calculatePrice();
 
+    public abstract double calculateAnnualPropertyTax();
+
     @Override
     public String toString() {
         return "Property{" +

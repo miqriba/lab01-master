@@ -162,6 +162,13 @@ public class Apartment extends ResidentialProperty{
     }
 
     @Override
+    public double calculateAnnualPropertyTax() {
+        double price = calculatePrice();
+
+        return price * 0.015 * (1 +(locationRating * 0.6));
+    }
+
+    @Override
     public String toString() {
         return "Apartment{" +
                 "price=" + price +
